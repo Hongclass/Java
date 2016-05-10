@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Intro to Java Programming, 6E - ShowBorderLayout.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style type = "text/css">
+body {font-family: "Courier New", sans-serif; font-size: 100%; color: black}
+.keyword {color: black; font-weight: bold}
+.comment {color: #77797C}
+.literal {color: #007346; font-weight: bold}
+</style>
+</head>
+<body>
+<pre>
+<span class = "keyword">import</span> javax.swing.JButton;<span class = "literal"></span><span class = "literal"></span>
+<span class = "keyword">import</span> javax.swing.JFrame;<span class = "literal"></span><span class = "literal"></span>
+<span class = "keyword">import</span> java.awt.BorderLayout;<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span><span class = "literal"></span>
+<span class = "keyword">public</span> <span class = "keyword">class</span> ShowBorderLayout <span class = "keyword">extends</span> JFrame <span class = "literal"></span>{<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "keyword">public</span> ShowBorderLayout(<span class = "literal"></span>)<span class = "literal"></span> <span class = "literal"></span>{<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "comment">// Set BorderLayout with horizontal gap 5 and vertical gap 10</span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> setLayout(<span class = "keyword">new</span> BorderLayout(<span class = "literal">5</span>,<span class = "literal"></span> <span class = "literal">10</span>)<span class = "literal"></span>)<span class = "literal"></span>;<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "comment">// Add buttons to the frame</span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> add(<span class = "keyword">new</span> JButton(<span class = "literal">"East"</span>)<span class = "literal"></span>,<span class = "literal"></span> BorderLayout.EAST)<span class = "literal"></span>;<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> add(<span class = "keyword">new</span> JButton(<span class = "literal">"South"</span>)<span class = "literal"></span>,<span class = "literal"></span> BorderLayout.SOUTH)<span class = "literal"></span>;<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> add(<span class = "keyword">new</span> JButton(<span class = "literal">"West"</span>)<span class = "literal"></span>,<span class = "literal"></span> BorderLayout.WEST)<span class = "literal"></span>;<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> add(<span class = "keyword">new</span> JButton(<span class = "literal">"North"</span>)<span class = "literal"></span>,<span class = "literal"></span> BorderLayout.NORTH)<span class = "literal"></span>;<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> add(<span class = "keyword">new</span> JButton(<span class = "literal">"Center"</span>)<span class = "literal"></span>,<span class = "literal"></span> BorderLayout.CENTER)<span class = "literal"></span>;<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span>}<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "comment">/** Main method */</span><span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "keyword">public</span> <span class = "keyword">static</span> <span class = "keyword">void</span> main(String[<span class = "literal"></span>]<span class = "literal"></span> args)<span class = "literal"></span> <span class = "literal"></span>{<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> ShowBorderLayout frame = <span class = "keyword">new</span> ShowBorderLayout(<span class = "literal"></span>)<span class = "literal"></span>;<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> frame.setTitle(<span class = "literal">"ShowBorderLayout"</span>)<span class = "literal"></span>;<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> frame.setLocationRelativeTo(<span class = "keyword">null</span>)<span class = "literal"></span>;<span class = "literal"></span> <span class = "comment">// New since JDK 1.4</span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)<span class = "literal"></span>;<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> frame.setSize(<span class = "literal">300</span>,<span class = "literal"></span> <span class = "literal">200</span>)<span class = "literal"></span>;<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span> frame.setVisible(<span class = "keyword">true</span>)<span class = "literal"></span>;<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span> <span class = "literal"></span> <span class = "literal"></span>}<span class = "literal"></span><span class = "literal"></span>
+<span class = "literal"></span>}<span class = "literal"></span><span class = "literal"></span>
+</pre>
+</body>
+</html>

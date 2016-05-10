@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<TITLE>Intro to Java Programming, 6E - TestCircleWithRadiusException.java</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+</HEAD>
+<basefont size=5><pre><FONT COLOR="#000080"><B>public</B></FONT><FONT COLOR="#000000"> <FONT COLOR="#000080"><B>class</B></FONT><FONT COLOR="#000000"> TestCircleWithRadiusException {
+  <FONT COLOR="#008000">/** Main method */<FONT COLOR="#000000">
+  <FONT COLOR="#000080"><B>public</B></FONT><FONT COLOR="#000000"> <FONT COLOR="#000080"><B>static</B></FONT><FONT COLOR="#000000"> <FONT COLOR="#000080"><B>void</B></FONT><FONT COLOR="#000000"> main(String[] args) {
+    <FONT COLOR="#000080"><B>try</B></FONT><FONT COLOR="#000000"> {
+      CircleWithRadiusException c1 = <FONT COLOR="#000080"><B>new</B></FONT><FONT COLOR="#000000"> CircleWithRadiusException(<FONT COLOR="#0000ff">5</FONT><FONT COLOR="#000000">);
+      c1.setRadius(<FONT COLOR="#0000ff">5</FONT><FONT COLOR="#000000">);
+      CircleWithRadiusException c3 = <FONT COLOR="#000080"><B>new</B></FONT><FONT COLOR="#000000"> CircleWithRadiusException(<FONT COLOR="#0000ff">0</FONT><FONT COLOR="#000000">);
+    }
+    <FONT COLOR="#000080"><B>catch</B></FONT><FONT COLOR="#000000"> (RadiusException ex) {
+      System.out.println(ex);
+    }
+
+    System.out.println(<FONT COLOR="#0000ff">"Number of objects created: "</FONT> +
+      CircleWithRadiusException.getNumberOfObjects());
+  }
+}
+</pre>

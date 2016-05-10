@@ -1,0 +1,80 @@
+
+<!-- saved from url=(0074)http://www.cs.nyu.edu/courses/spring10/V22.0101-003/html/PrintPyramid.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Intro to Java Programming, 6E - PrintPyramid.java</title>
+
+<style type="text/css">
+body {font-family: "Courier New", sans-serif; font-size: 100%; color: black}
+.keyword {color: #000080; font-weight: bold}
+.comment {color: #008000}
+.literal {color: #0000ff}
+</style>
+<style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></head>
+<body>
+<pre><span class="keyword">import</span> java.util.Scanner;<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="keyword">public</span> <span class="keyword">class</span> PrintPyramid <span class="literal"></span>{<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[<span class="literal"></span>]<span class="literal"></span> args)<span class="literal"></span> <span class="literal"></span>{<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="comment">// Create a Scanner</span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> Scanner scanner = <span class="keyword">new</span> Scanner(System.in)<span class="literal"></span>;<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="comment">// Prompt the user to enter the number of lines</span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> System.out.print(<span class="literal">"Enter the number of lines: "</span>)<span class="literal"></span>;<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="keyword">int</span> numberOfLines = scanner.nextInt(<span class="literal"></span>)<span class="literal"></span>;<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="keyword">if</span> <span class="literal"></span>(numberOfLines &lt; <span class="literal">1</span> || numberOfLines &gt; <span class="literal">15</span>)<span class="literal"></span> <span class="literal"></span>{<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> System.out.println(<span class="literal">"You must enter a number from <span class="literal">1</span> to 15"</span>)<span class="literal"></span>;<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> System.exit(<span class="literal">0</span>)<span class="literal"></span>;<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span>}<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="comment">// Print lines</span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="keyword">for</span> <span class="literal"></span>(<span class="keyword">int</span> row = <span class="literal">1</span>;<span class="literal"></span> row &lt;= numberOfLines;<span class="literal"></span> row+<span class="literal"></span>+<span class="literal"></span>)<span class="literal"></span> <span class="literal"></span>{<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="comment">// Print NUMBER_OF_LINES – row) leading spaces</span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="keyword">for</span> <span class="literal"></span>(<span class="keyword">int</span> column = <span class="literal">1</span>;<span class="literal"></span> column &lt;= numberOfLines <span class="literal"></span>-<span class="literal"></span> row;<span class="literal"></span> column+<span class="literal"></span>+<span class="literal"></span>)<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> System.out.print(<span class="literal">" <span class="literal"></span> <span class="literal"></span> "</span>)<span class="literal"></span>;<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="comment">// Print leading numbers row, row – 1, ..., 1</span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="keyword">for</span> <span class="literal"></span>(<span class="keyword">int</span> num = row;<span class="literal"></span> num &gt;= <span class="literal">1</span>;<span class="literal"></span> num-<span class="literal"></span>-<span class="literal"></span>)<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> System.out.print(<span class="literal"></span>(num &gt;= <span class="literal">10</span>)<span class="literal"></span> ? <span class="literal">" "</span> <span class="literal"></span>+<span class="literal"></span> num : <span class="literal">" <span class="literal"></span> "</span> <span class="literal"></span>+<span class="literal"></span> num)<span class="literal"></span>;<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="comment">// Print ending numbers 2, 3, ..., row – 1, row</span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="keyword">for</span> <span class="literal"></span>(<span class="keyword">int</span> num = <span class="literal">2</span>;<span class="literal"></span> num &lt;= row;<span class="literal"></span> num+<span class="literal"></span>+<span class="literal"></span>)<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> System.out.print(<span class="literal"></span>(num &gt;= <span class="literal">10</span>)<span class="literal"></span> ? <span class="literal">" "</span> <span class="literal"></span>+<span class="literal"></span> num : <span class="literal">" <span class="literal"></span> "</span> <span class="literal"></span>+<span class="literal"></span> num)<span class="literal"></span>;<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="comment">// Start a new line</span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> System.out.println(<span class="literal"></span>)<span class="literal"></span>;<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span> <span class="literal"></span>}<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span> <span class="literal"></span> <span class="literal"></span>}<span class="literal"></span>
+<span class="literal"></span>
+<span class="literal"></span>}<span class="literal"></span>
+<span class="literal"></span>
+</pre>
+
+
+</body></html>
